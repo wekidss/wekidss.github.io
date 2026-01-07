@@ -20,22 +20,22 @@
 
   </div>
 
-
-<script>
+  <script>
+  // This waits until EVERYTHING (including products.js) is loaded
   window.addEventListener('load', () => {
     console.log("All scripts loaded");
 
-  const product = PRODUCTS["product-1"];
-  console.log("Product:", product);
+    const product = PRODUCTS["product-1"];
+    
+    document.getElementById("name").textContent = product.name;
+    document.getElementById("image").src = product.image;
+    document.getElementById("description").textContent = product.description;
+    document.getElementById("price").textContent = formatPrice(product.price);
 
-  document.getElementById("name").textContent = product.name;
-  document.getElementById("image").src = product.image;
-  document.getElementById("description").textContent = product.description;
-  document.getElementById("price").textContent = formatPrice(product.price);
-
-  document.getElementById("buyBtn").addEventListener("click", () => {
-    console.log("Buy button clicked");
-    startCheckout(product.priceId);
+    document.getElementById("buyBtn").addEventListener("click", () => {
+        console.log("Buy button clicked");
+      startCheckout(product.priceId);
+    });
   });
 </script>
 
