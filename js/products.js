@@ -20,7 +20,31 @@ const PRODUCTS = {
   }
 };
 
-// ---------- Utility ----------
+// ---------- Helpers ----------
 function formatPrice(amount) {
   return `$${amount.toFixed(2)}`;
+}
+
+// ---------- Stripe Checkout ----------
+async function startCheckout(priceId) {
+  try {
+    const response = await fetch("/api/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ priceId })
+    });
+
+    const data = await response.json();
+
+    if (!data.url) {
+      console.error("No checkout URL returned", data);
+      return;
+    }
+
+    window.location.href = data.url;
+  } catch (err) {
+    console.error("Checkout error:", err);
+  }
 }
