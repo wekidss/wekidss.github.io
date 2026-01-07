@@ -4,20 +4,29 @@
   <title>Product One</title>
 </head>
 <body>
+  <div class="container product-page">
 
-<h1>Product One</h1>
+    <h1 id="name"></h1>
+    <img id="image">
+    <p id="description"></p>
+    <p class="price" id="price"></p>
 
-<img src="images/product1.jpg" width="300">
+    <button id="buyBtn">Buy Now</button>
 
-<p>This is Product One description.</p>
-<p><strong>Price:</strong> $10.00</p>
+    <br><br>
+    <a href="products.html">⬅ Back to Products</a>
 
-<button id="buyBtn">Buy Now</button>
+  </div>
 
-<script src="js/products.js"></script>
-<script>
-  buyProduct("price_XXXXXXX"); 
-</script>
+  <script src="js/products.js"></script>
+  <script>
+    const product = PRODUCTS["product-1"];
 
+    document.getElementById("name").textContent = product.name;
+    document.getElementById("image").src = product.image;
+    document.getElementById("description").textContent = product.description;
+    document.getElementById("price").textContent = formatPrice(product.price);
+  </script>
 </body>
+
 </html>
