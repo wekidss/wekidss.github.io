@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Product Two</title>
+   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container product-page">
@@ -18,15 +19,23 @@
 
   </div>
 
-  <script src="js/products.js"></script>
-  <script>
-    const product = PRODUCTS["product-2"];
+<script src="js/products.js"></script>
+<script>
+  console.log("JS loaded");
 
-    document.getElementById("name").textContent = product.name;
-    document.getElementById("image").src = product.image;
-    document.getElementById("description").textContent = product.description;
-    document.getElementById("price").textContent = formatPrice(product.price);
-  </script>
+  const product = PRODUCTS["product-1"];
+  console.log("Product:", product);
+
+  document.getElementById("name").textContent = product.name;
+  document.getElementById("image").src = product.image;
+  document.getElementById("description").textContent = product.description;
+  document.getElementById("price").textContent = formatPrice(product.price);
+
+  document.getElementById("buyBtn").addEventListener("click", () => {
+    console.log("Buy button clicked");
+    startCheckout(product.priceId);
+  });
+</script>
+
 </body>
-
 </html>
