@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product One</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/products.js" defer></script>
+</head>
+<body>
+  <div class="container product-page">
+
+    <h1 id="name"></h1>
+    <img id="image">
+    <p id="description"></p>
+    <p class="price" id="price"></p>
+
+    <button id="buyBtn">Buy Now</button>
+
+    <br><br>
+    <a href="products.html">⬅ Back to Products</a>
+
+  </div>
+
+
+<script>
+  console.log("JS loaded");
+
+  const product = PRODUCTS["product-1"];
+  console.log("Product:", product);
+
+  document.getElementById("name").textContent = product.name;
+  document.getElementById("image").src = product.image;
+  document.getElementById("description").textContent = product.description;
+  document.getElementById("price").textContent = formatPrice(product.price);
+
+  document.getElementById("buyBtn").addEventListener("click", () => {
+    console.log("Buy button clicked");
+    startCheckout(product.priceId);
+  });
+</script>
+
+</body>
+</html>
