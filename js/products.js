@@ -6,7 +6,8 @@ const PRODUCTS = {
     price: 10.00,
     currency: "AUD",
     image: "images/product1.jpg",
-    description: "This is Product One description."
+    description: "This is Product One description.",
+    priceId: "price_1SmknVH3aPcREejmaSTXb1ye"
   },
   "product-2": {
     id: "product-2",
@@ -14,7 +15,8 @@ const PRODUCTS = {
     price: 20.00,
     currency: "AUD",
     image: "images/product2.jpg",
-    description: "This is Product Two description."
+    description: "This is Product Two description.",
+    priceId: "price_1SmkqWH3aPcREejmHMhIg7nL"
   }
 };
 
