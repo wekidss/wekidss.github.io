@@ -22,7 +22,8 @@
 
 
 <script>
-  console.log("JS loaded");
+  window.addEventListener('load', () => {
+    console.log("All scripts loaded");
 
   const product = PRODUCTS["product-1"];
   console.log("Product:", product);
