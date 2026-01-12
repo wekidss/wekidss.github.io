@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/public/index.html" },
+    { "source": "/products", "destination": "/public/products.html" },
+    { "source": "/product/:id", "destination": "/public/product.html?id=:id" },
+    { "source": "/donate", "destination": "/public/donate.html" },
+    { "source": "/contact", "destination": "/public/contact.html" },
+    { "source": "/thankyou", "destination": "/public/thankyou.html" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "child-artist-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "",
+    "start": ""
+  },
+  "dependencies": {
+    "stripe": "^16.0.0"
+  }
+}
