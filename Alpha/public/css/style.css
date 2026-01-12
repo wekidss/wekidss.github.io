@@ -478,4 +478,49 @@ nav a:hover {
   .site-header {
     padding: 0.8rem 1rem;
   }
+
+}
+
+.donate-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.donate-card {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.toggle-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.donation-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.crypto-donate-wrapper {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.parent-note {
+  text-align: center;
+  margin-top: 2rem;
+  opacity: 0.7;
+  font-size: 0.9rem;
 }
