@@ -7,7 +7,7 @@ const products = [
     id: "artwork_1",
     name: "Sunset Dreams",
     price: 25,
-    image: "/images/artwork-1.jpg",
+    image: "images/artwork-1.jpg",
     description: "A warm, colorful drawing inspired by sunsets.",
     year: 2024,
     ranking: 1,
@@ -17,7 +17,7 @@ const products = [
     id: "artwork_2",
     name: "Forest Adventure",
     price: 30,
-    image: "/images/artwork-2.jpg",
+    image: "images/artwork-2.jpg",
     description: "A playful drawing of a magical forest.",
     year: 2023,
     ranking: 2,
@@ -142,5 +142,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
 
 
