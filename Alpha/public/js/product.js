@@ -76,7 +76,7 @@ function renderProducts() {
         <p class="product-meta">Year: ${p.year}</p>
 
         <div class="card-actions">
-          <a class="btn-view" href="/product/${encodeURIComponent(p.id)}">View</a>
+          <a class="btn-view" href="/product.html/${encodeURIComponent(p.id)}">View</a>
 
 			${
 			  p.soldOut
@@ -140,4 +140,5 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("product-detail")) {
     renderProductDetail();
   }
+
 });
