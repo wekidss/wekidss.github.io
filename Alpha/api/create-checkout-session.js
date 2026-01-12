@@ -24,8 +24,8 @@ export default async function handler(req, res) {
     const PRICE_IDS = {
       artwork_1: "price_1SmknVH3aPcREejmaSTXb1ye",   // replace with your real Stripe price IDs
       artwork_2: "price_1SmkqWH3aPcREejmHMhIg7nL",
-      donation_monthly: "price_1SmknVH3aPcREejmaSTXb1ye",
-      donation_yearly: "price_1SmkqWH3aPcREejmHMhIg7nL"
+      donation_monthly: "price_1SouykH3aPcREejmXumMo3tg",
+      donation_yearly: "price_1SouzyH3aPcREejmQSkXB83i"
     };
 
     let sessionConfig = {
@@ -94,6 +94,7 @@ export default async function handler(req, res) {
   }
 
 }
+
 
 
 
