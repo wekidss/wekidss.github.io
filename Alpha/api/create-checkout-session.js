@@ -5,6 +5,8 @@ import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
+console.log("Stripe key exists:", !!process.env.STRIPE_SECRET_KEY);
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
@@ -89,4 +91,5 @@ export default async function handler(req, res) {
     console.error("Stripe session error:", err);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
