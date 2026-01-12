@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Donate | [Child Name] Art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Support a young artist with a one-off or recurring donation." />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="/checkout.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">[Child Name] Art</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/products">Buy Artwork</a>
+      <a href="/donate" class="active">Donate</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <a href="/donate" class="floating-donate-btn">Donate</a>
+
+  <main class="page donate-page fade-in">
+    <h1>Support a Young Artist’s Dream</h1>
+    <p>Your donation helps with art supplies, classes, and creative learning.</p>
+
+    <div class="donation-type-toggle">
+      <span>Donation type:</span>
+      <button class="btn-toggle active" id="donate-recurring-btn" onclick="setDonationType('recurring')">
+        Recurring
+      </button>
+      <button class="btn-toggle" id="donate-oneoff-btn" onclick="setDonationType('oneoff')">
+        One‑off
+      </button>
+    </div>
+
+    <div class="donation-frequency" id="donation-frequency">
+      <span>Frequency:</span>
+      <button class="btn-toggle active" id="freq-monthly-btn" onclick="setDonationFrequency('monthly')">
+        Monthly
+      </button>
+      <button class="btn-toggle" id="freq-yearly-btn" onclick="setDonationFrequency('yearly')">
+        Yearly
+      </button>
+    </div>
+
+	<div class="donation-options">
+	  <button class="btn-donate-option" onclick="startDonation(10)">$10</button>
+	  <button class="btn-donate-option" onclick="startDonation(25)">$25</button>
+	  <button class="btn-donate-option" onclick="startDonation(50)">$50</button>
+	  <button class="btn-donate-option" onclick="startDonation('custom')">Custom</button>
+	</div>
+
+	<!-- NEW: Crypto donation button -->
+	<div class="crypto-donate-wrapper">
+	  <button class="btn-crypto" onclick="startCryptoDonation()">Donate with Crypto</button>
+	</div>
+
+    <p class="parent-note">
+      This website is run by a parent to support [Child Name]’s love for drawing.
+      Thank you for encouraging creativity.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> [Child Name] Art</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

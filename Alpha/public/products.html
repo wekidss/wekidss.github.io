@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Buy Artwork | [Child Name] Art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Browse and buy original artwork created by a young artist." />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="/product.js"></script>
+  <script defer src="/checkout.js"></script>
+</head>
+
+<body class="products-one-column">
+  <header class="site-header">
+    <div class="logo">[Child Name] Art</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/products" class="active">Buy Artwork</a>
+      <a href="/donate">Donate</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <a href="/donate" class="floating-donate-btn">Donate</a>
+
+  <main class="page fade-in">
+    <h1>Buy Artwork</h1>
+    <p>Bring home a piece of childhood imagination.</p>
+
+    <div class="sort-controls">
+      <span>Sort by:</span>
+      <button class="btn-sort active" id="sort-ranking-btn" onclick="setSort('ranking')">
+        Ranking
+      </button>
+      <button class="btn-sort" id="sort-year-btn" onclick="setSort('year')">
+        Year
+      </button>
+    </div>
+
+    <section id="product-list" class="product-grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> [Child Name] Art</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

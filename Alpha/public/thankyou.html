@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thank You | [Child Name] Art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Thank you for supporting a young artist." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">[Child Name] Art</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/products">Buy Artwork</a>
+      <a href="/donate">Donate</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page thankyou-page fade-in">
+    <h1>Thank You!</h1>
+    <p>Your support means the world to a young artist.</p>
+    <p>Every contribution helps [Child Name] keep creating.</p>
+
+    <a class="btn-buy" href="/products">View More Artwork</a>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> [Child Name] Art</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | [Child Name] Art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact us about artwork, orders, or commissions." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">[Child Name] Art</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/products">Buy Artwork</a>
+      <a href="/donate">Donate</a>
+      <a href="/contact" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <a href="/donate" class="floating-donate-btn">Donate</a>
+
+  <main class="page contact-page fade-in">
+    <h1>Contact Us</h1>
+    <p>Have a question about an artwork, order, or commission?</p>
+
+    <section class="contact-channels">
+      <div><strong>Email:</strong> example@email.com</div>
+      <div><strong>Line:</strong> line-id-here</div>
+      <div><strong>WhatsApp:</strong> +1234567890</div>
+      <div><strong>Instagram:</strong> @your_instagram</div>
+      <div><strong>Twitter/X:</strong> @your_twitter</div>
+    </section>
+
+    <form class="contact-form" action="mailto:example@email.com" method="post">
+      <label>Name<input type="text" name="name" required /></label>
+      <label>Email<input type="email" name="email" required /></label>
+      <label>Message<textarea name="message" rows="5" required></textarea></label>
+      <button class="btn-contact" type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> [Child Name] Art</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

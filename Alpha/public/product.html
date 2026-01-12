@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Artwork | [Child Name] Art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="View details of this artwork by a young artist." />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="/product.js"></script>
+  <script defer src="/checkout.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">[Child Name] Art</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/products" class="active">Buy Artwork</a>
+      <a href="/donate">Donate</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <a href="/donate" class="floating-donate-btn">Donate</a>
+
+  <main class="page product-page fade-in">
+    <article class="product-detail" id="product-detail">
+      <!-- Filled dynamically by product.js -->
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> [Child Name] Art</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

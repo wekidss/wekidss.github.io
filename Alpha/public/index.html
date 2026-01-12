@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>[Child Name] Art | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Support a young artist by buying original artwork or making a donation." />
+  <meta name="keywords" content="child art, young artist, drawings, donate, buy art" />
+  <meta property="og:title" content="[Child Name] Art" />
+  <meta property="og:description" content="Buy artwork or support a young artist's creative journey." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">[Child Name] Art</div>
+    <nav>
+      <a href="/" class="active">Home</a>
+      <a href="/products">Buy Artwork</a>
+      <a href="/donate">Donate</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <a href="/donate" class="floating-donate-btn">Donate</a>
+
+  <main class="hero fade-in">
+    <section class="hero-content">
+      <h1>A young artist with a big imagination</h1>
+      <p>Buy artwork or support the artist to help creativity grow.</p>
+
+      <div class="hero-buttons">
+        <a class="btn-buy" href="/products">View Artwork</a>
+        <a class="btn-donate" href="/donate">Support the Artist</a>
+      </div>
+    </section>
+
+    <section class="hero-media">
+      <img
+        class="hero-photo"
+        src="/images/hero-photo.jpg"
+        alt="Child drawing at a table"
+      />
+
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&controls=0&loop=1&playlist=dQw4w9WgXcQ"
+          title="Artist at work"
+          frameborder="0"
+          allow="autoplay"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <section class="about fade-in">
+    <h2>About the Artist</h2>
+    <p>
+      [Child Name] is a young artist who loves drawing, painting, and creating colorful stories on paper.
+      Every artwork is made with joy, curiosity, and imagination.
+    </p>
+    <p class="parent-note">
+      This website is created by a parent to support their creative journey.
+      Thank you for helping a young artist grow.
+    </p>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> [Child Name] Art</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
