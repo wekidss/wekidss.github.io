@@ -2,10 +2,10 @@
 // Secure Stripe Checkout Session creation (server-side only)
 
 import Stripe from "stripe";
-
+console.log("Stripe key exists:", !!process.env.STRIPE_SECRET_KEY);
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-console.log("Stripe key exists:", !!process.env.STRIPE_SECRET_KEY);
+
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -93,3 +93,4 @@ export default async function handler(req, res) {
   }
 
 }
+
