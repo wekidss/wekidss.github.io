@@ -1,44 +1,99 @@
-<main class="page donate-page fade-in">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Donate | [Child Name] Art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Support a young artist with a one-off or recurring donation." />
 
-  <section class="donate-hero">
-    <h1>Support a Young Artist’s Dream</h1>
-    <p>Your donation helps with art supplies, classes, and creative learning.</p>
-  </section>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/checkout.js"></script>
+</head>
 
-  <section class="donate-card">
-    
-    <div class="donation-type-toggle">
-      <span class="label">Donation type</span>
-      <div class="toggle-group">
-        <button class="btn-toggle active" id="donate-recurring-btn" onclick="setDonationType('recurring')">Recurring</button>
-        <button class="btn-toggle" id="donate-oneoff-btn" onclick="setDonationType('oneoff')">One‑off</button>
+<body>
+  <header class="site-header">
+    <div class="logo">[Child Name] Art</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/products.html">Buy Artwork</a>
+      <a href="/donate.html" class="active">Donate</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page donate-page fade-in">
+
+    <section class="donate-hero">
+      <h1>Support a Young Artist’s Dream 🎨</h1>
+      <p>Your donation helps with art supplies, classes, and creative learning.</p>
+    </section>
+
+    <section class="donate-card">
+
+      <div class="donation-type-toggle">
+        <span class="label">Donation type</span>
+        <div class="toggle-group">
+          <button class="btn-toggle active" id="donate-recurring-btn" onclick="setDonationType('recurring')">🔁 Recurring</button>
+          <button class="btn-toggle" id="donate-oneoff-btn" onclick="setDonationType('oneoff')">💵 One‑off</button>
+        </div>
       </div>
-    </div>
 
-    <div class="donation-frequency" id="donation-frequency">
-      <span class="label">Frequency</span>
-      <div class="toggle-group">
-        <button class="btn-toggle active" id="freq-monthly-btn" onclick="setDonationFrequency('monthly')">Monthly</button>
-        <button class="btn-toggle" id="freq-yearly-btn" onclick="setDonationFrequency('yearly')">Yearly</button>
+      <div class="donation-frequency" id="donation-frequency">
+        <span class="label">Frequency</span>
+        <div class="toggle-group">
+          <button class="btn-toggle active" id="freq-monthly-btn" onclick="setDonationFrequency('monthly')">📅 Monthly</button>
+          <button class="btn-toggle" id="freq-yearly-btn" onclick="setDonationFrequency('yearly')">📆 Yearly</button>
+        </div>
       </div>
-    </div>
 
-    <div class="donation-options">
-      <button class="btn-donate-option" onclick="startDonation(10)">$10</button>
-      <button class="btn-donate-option" onclick="startDonation(25)">$25</button>
-      <button class="btn-donate-option" onclick="startDonation(50)">$50</button>
-      <button class="btn-donate-option" onclick="startDonation('custom')">Custom</button>
-    </div>
+      <div class="donation-options">
+        <button class="btn-donate-option" onclick="startDonation(10)">💛 $10</button>
+        <button class="btn-donate-option" onclick="startDonation(25)">💚 $25</button>
+        <button class="btn-donate-option" onclick="startDonation(50)">💙 $50</button>
+        <button class="btn-donate-option" onclick="startDonation('custom')">✏️ Custom</button>
+      </div>
 
-    <div class="crypto-donate-wrapper">
-      <button class="btn-crypto" onclick="startCryptoDonation()">Donate with Crypto</button>
-    </div>
+      <div class="slider-wrapper">
+        <span class="label">Suggested donation</span>
+        <input type="range" min="5" max="200" value="25" id="donationSlider" oninput="updateSliderValue()">
+        <div class="slider-value" id="sliderValue">$25</div>
+        <button class="btn-buy slider-donate-btn" onclick="startDonation(parseInt(document.getElementById('donationSlider').value))">
+          ❤️ Donate this amount
+        </button>
+      </div>
 
-  </section>
+      <div class="progress-section">
+        <span class="label">Goal: $500 for art supplies</span>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progressFill"></div>
+        </div>
+      </div>
 
-  <p class="parent-note">
-    This website is run by a parent to support [Child Name]’s love for drawing.
-    Thank you for encouraging creativity.
-  </p>
+      <div class="crypto-donate-wrapper">
+        <button class="btn-crypto" onclick="startCryptoDonation()">🪙 Donate with Crypto</button>
+      </div>
 
-</main>
+    </section>
+
+    <p class="parent-note">
+      This website is run by a parent to support [Child Name]’s love for drawing.
+      Thank you for encouraging creativity.
+    </p>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> [Child Name] Art</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function updateSliderValue() {
+      const val = document.getElementById("donationSlider").value;
+      document.getElementById("sliderValue").textContent = "$" + val;
+    }
+  </script>
+
+</body>
+</html>
