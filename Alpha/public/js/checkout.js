@@ -7,9 +7,9 @@ const DEBUG = true;
 
 // Coinbase Commerce checkout URLs
 const CRYPTO_CHECKOUT_URLS = {
-  artwork_1: "https://commerce.coinbase.com/checkout/abc123",
-  artwork_2: "https://commerce.coinbase.com/checkout/xyz789",
-  donation: "https://commerce.coinbase.com/checkout/donate456"
+  artwork_1: "https://nowpayments.io/payment/?iid=4733451852&paymentId=4664375733",
+  artwork_2: "https://nowpayments.io/payment/?iid=4733451852&paymentId=4664375733",
+  donation: "https://nowpayments.io/payment/?iid=4733451852&paymentId=4664375733"
 };
 
 function startCryptoCheckout(productId) {
@@ -154,4 +154,5 @@ document.addEventListener("DOMContentLoaded", () => {
     setDonationType("recurring");
     setDonationFrequency("monthly");
   }
+
 });
